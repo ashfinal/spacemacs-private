@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Hyperlink
+# key: link
+# group: private
+# --
+[[${1:link}${2::tag}][${3:description}]]

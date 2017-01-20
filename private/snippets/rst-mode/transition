@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Transition
+# key: trans
+# group: private
+# --
+`(make-string fill-column ?\-)`
+
+$0

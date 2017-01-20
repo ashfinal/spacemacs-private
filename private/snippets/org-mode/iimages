@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Refresh iimages
+# key: iimage
+# group: private
+# --
+
+#+SRCNAME: Refresh iimages
+#+BEGIN_SRC emacs-lisp :results None
+(clear-image-cache nil)
+(iimage-mode nil)
+(iimage-mode t)
+#+END_SRC

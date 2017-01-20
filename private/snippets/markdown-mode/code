@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Code Block
+# key: code
+# group: private
+# --
+\`\`\` ${1:python}
+$2
+\`\`\`
+$0

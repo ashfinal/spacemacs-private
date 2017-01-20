@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: Chart
+# key: chart
+# group: private
+# --
+.. chart:: ${1:$$(yas-choose-value '("Line" "StackedLine" "HorizontalBar" "Bar" "StackedBar" "HorizontalBar" "Histogram" "XY" "DateLine" "TimeLine" "TimeDeltaLine" "DateTimeLine" "Pie" "Radar" "Box" "Dot" "Funnel" "Gauge" "SolidGauge" "Pyramid" "Treemap"))}
+   :title: '${2:Browser usage evolution (in %)}'
+   :x_labels: ["2002", "2003", "2004", "2005", "2006", "2007"]
+   :half_pie: True
+   :inner_radius: 0.75
+
+   'Firefox', [None, None, 0, 16.6, 25, 31]
+   'Chrome',  [None, None, None, None, None, None]
+   'IE',      [85.8, 84.6, 84.7, 74.5, 66, 58.6]
+   'Others',  [14.2, 15.4, 15.3, 8.9, 9, 10.4]

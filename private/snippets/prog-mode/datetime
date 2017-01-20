@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Insert Datetime
+# key: dtime
+# group: private
+# --
+`(format-time-string "%Y-%m-%d %H:%M")`

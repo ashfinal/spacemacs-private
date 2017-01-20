@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Embedded URI
+# key: ilink
+# group: private          
+# --
+\`${1:Text} <${2:URI}>\`_ $0

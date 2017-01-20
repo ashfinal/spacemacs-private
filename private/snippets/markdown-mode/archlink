@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# key: acr
+# name: Link Anchor
+# group: private
+# --
+
+[${1:Display_Text}][${2:id}]$5
+
+[$2]:${3:http://example.com/} ${4:"$3"}

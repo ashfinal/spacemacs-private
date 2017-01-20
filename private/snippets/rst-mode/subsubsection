@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Subsubsection
+# key: sssec
+# group: private                            
+# --
+${1:$(make-string (string-width yas-text) ?\+)}
+${1:Subsubsection}
+${1:$(make-string (string-width yas-text) ?\+)}
+
+$0

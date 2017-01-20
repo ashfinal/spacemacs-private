@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: INCLUDE
+# key: include
+# group: private
+# --
+#+INCLUDE: "${1:path_to_file}" src ${2:emacs-lisp} :lines "${3:1-10}"

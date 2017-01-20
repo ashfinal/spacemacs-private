@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Source Code Block
+# key: src
+# group: private
+# --
+#+SRCNAME: ${1:name}
+#+BEGIN_SRC ${2:emacs-lisp} :results ${3:output}
+${4:CODE BLOCK}
+#+END_SRC
+$0

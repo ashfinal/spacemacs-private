@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: QUOTE
+# key: quote
+# group: private                            
+# --
+#+BEGIN_QUOTE
+${1:Paragraph}
+#+END_QUOTE

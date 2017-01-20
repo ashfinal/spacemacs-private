@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Link Abbreviation
+# key: alink
+# group: private
+# --
+[[${1:linkword}${2::tag}][${3:description}]] $0
+#+LINK: $1 ${4:link}

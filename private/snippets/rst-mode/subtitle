@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Subtitle
+# key: stit
+# group: private
+# --
+${1:$(make-string (string-width yas-text) ?\-)}
+${1:Subtitle}
+${1:$(make-string (string-width yas-text) ?\-)}
+
+$0

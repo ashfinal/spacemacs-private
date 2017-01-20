@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Org-Plot
+# key: plot
+# group: private
+# --
+#+PLOT: title:"${1:gnuplot}" ind:${2:0} deps:(${3:2 3 4}) type:${4:2d} with:${5:$$(yas-choose-value '("lines" "boxes" "dots" "points" "filledcurves" "histograms" "impulses" "linespoints"))} file:"${6:figure.svg}"

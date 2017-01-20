@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: Admonition
+# key: adm
+# group: private
+# --
+.. ${1:attention}:: ${2:$1 admonition.}
+   ${3:The second line of the first paragraph.}
+
+$0

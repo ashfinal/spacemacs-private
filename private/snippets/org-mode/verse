@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: VERSE
+# key: verse
+# group: private                            
+# --
+#+BEGIN_VERSE
+ ${1:Paragraph}
+#+END_VERSE

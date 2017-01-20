@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Local File
+# key: file
+# group: private
+# --
+[[file:${1:./Downloads/file.py}::${2:1}]]
+$0

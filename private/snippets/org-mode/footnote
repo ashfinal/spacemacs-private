@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Footnote
+# key: fnt
+# group: private                                                                             
+# --
+[fn:${1:1}] $0
+
+[fn:$1] ${2:Reference Text}

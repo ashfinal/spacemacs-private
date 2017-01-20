@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: OPTIONS
+# key: options
+# group: private
+# --
+#+OPTIONS: title:${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`} email:${2:ashfinal@gmail.com} toc:${3:nil}

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Local Variables
+# key: lvar
+# group: private
+# --
+`comment-start`Local Variables:`comment-end`
+`comment-start`mode: ${1:`major-mode`}`comment-end`
+`comment-start`fill-column: ${2:`fill-column`}`comment-end`
+`comment-start`tab-width: ${3:`tab-width`}`comment-end`
+`comment-start`End:`comment-end`

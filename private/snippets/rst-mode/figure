@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: Figure
+# key: fig
+# group: private
+# --
+.. figure:: ${1:path_to_figure}
+   :scale: ${2:100} %
+   :align: ${3:center}
+   :alt: ${4:${1:$(file-name-nondirectory yas-text)}}
+
+   ${5:${1:$(upcase (file-name-nondirectory (file-name-sans-extension yas-text)))}}
+
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Inline Image
+# key: img
+# group: private
+# --
+
+#+ATTR_ORG: :width ${1:300}px
+[[file:${2:Downloads/image.jpg}]]

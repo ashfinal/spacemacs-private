@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Horizontal Line
+# key: line
+# group: private
+# --
+`(make-string fill-column ?\-)`
+
+$0

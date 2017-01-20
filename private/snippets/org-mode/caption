@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: CAPTION
+# key: caption
+# group: private
+# --
+#+CAPTION: ${1:Caption for figure or table}
+#+NAME:   ${2:fig:SED-HR4049}
+$0

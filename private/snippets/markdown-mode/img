@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: img
+# name: Insert Image
+# group: private
+# --
+
+![${1:Some_Text}](${2:url_to_image} ${3:"$1"})

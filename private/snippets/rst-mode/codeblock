@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: Code Block
+# key: code
+# group: private
+# --
+.. code:: ${1:python}
+  ${2:Code Block}
+
+$0

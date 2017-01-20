@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: TOC
+# key: toc
+# group: private
+# --
+.. contents:: ${1:Table of Contents}
+   :depth: ${2:2}
+
+$0

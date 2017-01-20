@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Substitution Definition
+# key: subd
+# group: private          
+# --
+|${1:text}| $0
+
+.. |$1| ${2:image}:: ${3:path_to_img}
