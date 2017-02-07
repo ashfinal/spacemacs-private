@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: CSV Table
+# key: ctbl
+# group: private
+# --
+.. csv-table:: ${1:Caption}
+   :header: ${2:"Treat", "Quantity", "Description"}
+   :widths: ${3:15, 10, 30}
+
+   ${4:"Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be"
+   "Gannet Ripple", 1.99, "On a stick!"}

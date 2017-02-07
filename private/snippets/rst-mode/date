@@ -1,11 +1,9 @@
 # -*- mode: snippet -*-
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
-# name: Thumbnail
-# key: thumbn
+# name: Date
+# key: date
 # group: private
 # --
-.. thumbnail:: ${1:path_to_img}
-   :width: ${2:400}
-   :align: ${3:center}
+.. |${1:date}| date:: ${2:%Y-%m-%d %H:%M}
 
-$0
+${3:This document was generated at} |$1|

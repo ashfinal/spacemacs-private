@@ -54,6 +54,7 @@ values."
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      (org :variables
+          org-latex-compiler "xelatex"
           org-confirm-babel-evaluate nil
           org-preview-latex-default-process 'imagemagick
           org-image-actual-width 400
@@ -327,7 +328,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq frame-title-format "%b")
   (setq system-time-locale "C")
-  (setq default-tab-width 4)
+  (setq tab-width 4)
   (setq linum-relative-format "%4s ")
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
   ;; Make evil-mode up/down operate in screen lines instead of logical lines
@@ -381,9 +382,12 @@ you should place your code here."
  '(eww-search-prefix "http://www.bing.com/search?q=")
  '(package-selected-packages
    (quote
-    (yasnippet with-editor impatient-mode request magit origami tabbar flycheck git-commit twilight-bright-theme atom-one-dark-theme company helm helm-core writeroom-mode skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode haml-mode web-completion-data dash-functional tern anaconda-mode pythonic define-word yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vmd-mode vimrc-mode vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide imenu-list ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-tail highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diff-hl dactyl-mode cython-mode company-web company-tern company-statistics company-quickhelp company-anaconda column-enforce-mode coffee-mode clean-aindent-mode beacon auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+    (packed smartparens magit-popup yasnippet with-editor impatient-mode request magit origami tabbar flycheck git-commit twilight-bright-theme atom-one-dark-theme company helm helm-core writeroom-mode skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode haml-mode web-completion-data dash-functional tern anaconda-mode pythonic define-word yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vmd-mode vimrc-mode vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide imenu-list ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-tail highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diff-hl dactyl-mode cython-mode company-web company-tern company-statistics company-quickhelp company-anaconda column-enforce-mode coffee-mode clean-aindent-mode beacon auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(paradox-github-token t)
- '(safe-local-variable-values (quote ((tab-width . ${3:4}) (fill-column . ${2:80})))))
+ '(safe-local-variable-values (quote ((tab-width . ${3:4}) (fill-column . ${2:80}))))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.163.com")
+ '(smtpmail-smtp-service 25))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

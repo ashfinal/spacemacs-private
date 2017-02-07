@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Inline Code
+# key: icode
+# group: private
+# --
+:${1:code}:\`${2:text}\`

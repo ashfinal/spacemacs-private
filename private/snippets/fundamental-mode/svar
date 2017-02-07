@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Single-line Variables
+# key: lvar
+# --
+`comment-start`-*- coding: ${1:utf-8}; mode: ${2:`major-mode`}; fill-column: ${3:`fill-column`}; tab-width: ${4:`tab-width`}; -*-
+$0
