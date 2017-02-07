@@ -4,7 +4,7 @@
 # key: adm
 # group: private
 # --
-.. ${1:attention}:: ${2:$1 admonition.}
+.. ${1:$$(yas-choose-value '("attention" "caution" "danger" "error" "hint" "important" "note" "tip" "warning"))}:: ${2:$1 admonition.}
    ${3:The second line of the first paragraph.}
 
 $0
