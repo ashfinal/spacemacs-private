@@ -4,6 +4,6 @@
 # group: private
 # --
 #+BEGIN_SRC ${2:emacs-lisp} :results ${3:output}
-${4:CODE BLOCK}
+$4
 #+END_SRC
 $0

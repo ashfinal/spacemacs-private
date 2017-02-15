@@ -35,6 +35,8 @@ values."
      (javascript :variables
                  javascript-disable-tern-port-files nil)
      lua
+     (latex :variables
+            TeX-engine 'xetex)
      python
      html
      vimscript
@@ -55,6 +57,7 @@ values."
                markdown-live-preview-engine 'vmd)
      (org :variables
           org-latex-compiler "xelatex"
+          org-latex-pdf-process '("xelatex -interaction nonstopmode %b" "xelatex -interaction nonstopmode %b")
           org-confirm-babel-evaluate nil
           org-preview-latex-default-process 'imagemagick
           org-image-actual-width 400
@@ -328,6 +331,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq frame-title-format "%b")
   (setq system-time-locale "C")
+  (setq default-tab-width 4)
   (setq tab-width 4)
   (setq linum-relative-format "%4s ")
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
@@ -344,6 +348,14 @@ you should place your code here."
   (evil-define-key 'visual evil-surround-mode-map "S" 'evil-surround-region)
   (setq-default evil-escape-delay 0.2)
   (setq-default evil-escape-key-sequence "jk")
+  ;; Disable evilification of a mode
+  (push '("*magit" . hybrid) evil-buffer-regexps)
+  (evil-set-initial-state 'doc-view-mode 'hybrid)
+  (setq doc-view-continuous t)
+  (evil-set-initial-state 'image-mode 'hybrid)
+  (evil-set-initial-state 'dired-mode 'hybrid)
+  (spacemacs|diminish reftex-mode " Ⓡ" " R")
+  (spacemacs|diminish compilation-in-progress " Ⓒ" " C")
   (spacemacs|diminish artist-mode " Ⓐ" " A")
   (spacemacs|diminish orgtbl-mode " Ⓣ" " T")
   (spacemacs|diminish iimage-mode " Ⓖ" " G")
@@ -375,19 +387,19 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#FFFFFF" "#d15120" "#5f9411" "#d2ad00" "#6b82a7" "#a66bab" "#6b82a7" "#505050"])
+ '(ansi-term-color-vector
+   [unspecified "#FFFFFF" "#d15120" "#5f9411" "#d2ad00" "#6b82a7" "#a66bab" "#6b82a7" "#505050"])
  '(custom-safe-themes
    (quote
     ("6254372d3ffe543979f21c4a4179cd819b808e5dd0f1787e2a2a647f5759c1d1" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(eww-search-prefix "http://www.bing.com/search?q=")
+ '(fci-rule-character-color "#d9d9d9")
  '(package-selected-packages
    (quote
-    (packed smartparens magit-popup yasnippet with-editor impatient-mode request magit origami tabbar flycheck git-commit twilight-bright-theme atom-one-dark-theme company helm helm-core writeroom-mode skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode haml-mode web-completion-data dash-functional tern anaconda-mode pythonic define-word yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vmd-mode vimrc-mode vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide imenu-list ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-tail highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diff-hl dactyl-mode cython-mode company-web company-tern company-statistics company-quickhelp company-anaconda column-enforce-mode coffee-mode clean-aindent-mode beacon auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
- '(paradox-github-token t)
- '(safe-local-variable-values (quote ((tab-width . ${3:4}) (fill-column . ${2:80}))))
- '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "smtp.163.com")
- '(smtpmail-smtp-service 25))
+    (company-auctex auctex-latexmk auctex packed smartparens magit-popup yasnippet with-editor impatient-mode request magit origami tabbar flycheck git-commit twilight-bright-theme atom-one-dark-theme company helm helm-core writeroom-mode skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode haml-mode web-completion-data dash-functional tern anaconda-mode pythonic define-word yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vmd-mode vimrc-mode vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide imenu-list ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-tail highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diff-hl dactyl-mode cython-mode company-web company-tern company-statistics company-quickhelp company-anaconda column-enforce-mode coffee-mode clean-aindent-mode beacon auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# name: Fontspec CJK
+# key: cjk
+# group: private
+# --
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+    \setromanfont{${1:苹方-简}}
+  \usepackage[indentfirst]{xeCJK}
+    \setCJKmainfont{$1}
+    \parindent 2em
+  \XeTeXlinebreaklocale "zh"
+  \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\fi
+$0
