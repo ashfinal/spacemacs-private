@@ -60,7 +60,8 @@
  '(tab-width 4)
  '(tool-bar-mode nil)
  '(undo-tree-visualizer-diff t)
- '(which-key-mode t))
+ '(which-key-mode t)
+ '(winner-mode t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
