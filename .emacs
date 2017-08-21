@@ -33,6 +33,7 @@
  '(initial-major-mode (quote org-mode))
  '(linum-format "%2d ")
  '(magit-auto-revert-mode nil)
+ '(make-backup-files nil)
  '(org-babel-load-languages (quote ((sh . t) (python . t) (emacs-lisp . t))))
  '(org-confirm-babel-evaluate nil)
  '(org-image-actual-width (quote (300)))
