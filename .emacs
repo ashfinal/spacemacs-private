@@ -48,8 +48,9 @@
  '(package-archives
    (quote
     (("melpa" . "http://elpa.emacs-china.org/melpa/")
-     ("gnu" . "http://elpa.emacs-china.org/gnu/"))))
- '(package-selected-packages (quote (which-key undo-tree atom-one-dark-theme magit)))
+     ("gnu" . "http://elpa.emacs-china.org/gnu/")
+     ("org" . "http://elpa.emacs-china.org/org/"))))
+ '(package-selected-packages (quote (org which-key undo-tree atom-one-dark-theme magit)))
  '(recentf-auto-cleanup 300)
  '(recentf-mode t)
  '(save-place-mode 1)
